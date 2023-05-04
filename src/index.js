@@ -1,4 +1,4 @@
-const { request, formatMediumPost, formatDevPost } = require('./utils');
+const { request, formatMediumPost, formatDevPost, formatCryptohubPost } = require('./utils');
 
 /**
  * Get most recent medium posts
@@ -40,7 +40,28 @@ const getDevPost = async ({ user }) => {
   }
 };
 
+/**
+ * Get most recent CryptoHub posts
+ *
+ * @param {Object} param
+ * @returns {Array} posts
+ */
+const getCryptohubPost = async ({ user }) => {
+  try {
+    if (!user) return [];
+
+    let response = await request(
+      `https://cryptohub.digital/api/articles?per_page=10&username=${user}`
+    );
+
+    return response.data.map((item) => formatCryptohubPost(item));
+  } catch (error) {
+    return [];
+  }
+};
+
 module.exports = {
   getMediumPost: getMediumPost,
   getDevPost: getDevPost,
+  getCryptohubPost: getCryptohubPost,
 };

@@ -56,6 +56,23 @@ const formatDevPost = (post) => {
 };
 
 /**
+ * Format raw CryptoHub post
+ *
+ * @param {Object} post
+ * @return {Object} formatted post
+ */
+const formatCryptohubPost = (post) => {
+  return {
+    title: post.title.trim(),
+    description: post.description.replace('\n', '').trim(),
+    thumbnail: post.social_image ? post.social_image : post.cover_image,
+    link: post.url,
+    categories: post.tag_list,
+    publishedAt: new Date(post.published_at),
+  };
+};
+
+/**
  * Ellipsis long text
  *
  * @param {string} str
@@ -75,4 +92,5 @@ module.exports = {
   request: request,
   formatMediumPost: formatMediumPost,
   formatDevPost: formatDevPost,
+  formatCryptohubPost: formatCryptohubPost,
 };
