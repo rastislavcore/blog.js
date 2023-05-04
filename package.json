@@ -1,5 +1,5 @@
 {
-  "name": "blog-js",
+  "name": "blog.js",
   "version": "2.0.4",
   "description": "Api client to get recent blog posts from popular blogging platforms,",
   "main": "./src/index.js",
@@ -40,6 +40,7 @@
     "medium",
     "dev.to",
     "dev",
+    "cryptohub",
     "devto",
     "blog",
     "medium api",

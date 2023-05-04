@@ -5,13 +5,13 @@
 Install via NPM.
 
 ```
-npm install rastislavcore/blog-js#main
+npm install rastislavcore/blog.js#main
 ```
 
 Or install via Yarn.
 
 ```
-yarn add rastislavcore/blog-js#main
+yarn add rastislavcore/blog.js#main
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ yarn add rastislavcore/blog-js#main
 - **`getDevPost()`**: Get 10 recent posts from [dev](https://dev.to).
 
   ```js
-  const { getDevPost } = require('blog-js');
+  const { getDevPost } = require('blog.js');
 
   getDevPost({
     user: 'yourusername',
@@ -31,7 +31,7 @@ yarn add rastislavcore/blog-js#main
 - **`getCryptohubPost()`**: Get 10 recent posts from [CRYPTO HUB](https://cryptohub.digital).
 
   ```js
-  const { getCryptohubPost } = require('blog-js');
+  const { getCryptohubPost } = require('blog.js');
 
   getCryptohubPost({
     user: 'yourusername',
@@ -43,7 +43,7 @@ yarn add rastislavcore/blog-js#main
 - **`getMediumPost()`**: Get 10 recent posts from [medium](https://medium.com).
 
   ```js
-  const { getMediumPost } = require('blog-js');
+  const { getMediumPost } = require('blog.js');
 
   getMediumPost({
     user: 'yourusername',
